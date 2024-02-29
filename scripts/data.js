@@ -18,24 +18,94 @@ const transitions = [
     from: 'juggle',
     via: [],
     to: 'spike',
+    alias: null,
   },
   {
     from: 'juggle',
     via: [],
     to: 'lighthouse',
+    alias: null,
   },
   {
     from: 'lighthouse',
     via: ['flip', 'double flip', 'triple flip', 'juggle', 'inward flip',
       'double inward flip', 'triple inward flip'],
     to: 'lighthouse',
+    alias: null,
   },
   {
     from: 'lighthouse',
     via: ['', 'flip', 'double flip', 'inward flip', 'double inward flip'],
     to: 'in',
+    alias: null,
+  },
+  {
+    from: 'lighthouse',
+    via: [],
+    to: 'tradespike',
+    alias: null,
+  },
+  {
+    from: 'spike',
+    via: ['whirlwind', 'double whirlwind', 'triple whirlwind'],
+    to: '',
+    alias: 'spike',
+  },
+  {
+    from: 'spike',
+    via: [],
+    to: 'juggle',
+    alias: null,
+  },
+  {
+    from: 'big cup',
+    via: [],
+    to: 'juggle',
+    alias: null,
+  },
+  {
+    from: 'big cup',
+    via: [],
+    to: 'lighthouse',
+    alias: null,
+  },
+  {
+    from: 'lunar',
+    via: ['', 'flip'],
+    to: 'in',
+    alias: null,
+  },
+  {
+    from: 'lunar',
+    via: ['flip', 'double flip', 'triple flip'],
+    to: 'lunar',
+    alias: null,
+  },
+  {
+    from: 'lunar',
+    via: [],
+    to: 'juggle',
+    alias: null,
+  },
+  {
+    from: 'lunar',
+    via: [],
+    to: 'tradespike',
+    alias: null,
+  },
+  {
+    from: 'inward lunar',
+    via: ['', 'flip'],
+    to: 'in',
+    alias: null,
+  },
+  {
+    from: 'inward lunar',
+    via: ['flip', 'double flip', 'triple flip'],
+    to: 'inward lunar',
+    alias: null,
   },
 ];
 
-const starts = ['juggle', 'lighthouse'];
-const ends = ['spike', 'in'];
+const starts = ['juggle', 'lighthouse', 'big cup', 'lunar', 'inward lunar'];
+const ends = ['spike', 'in', 'tradespike'];

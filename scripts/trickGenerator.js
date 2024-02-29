@@ -54,13 +54,21 @@ function generateTrick() {
       if (currentCount + add >= nextTransitionIndex) {
         if (possibilities[i].via.length === 0) {
           finalTrick.push(possibilities[i].to);
-          currentState = possibilities[i].to;
+          if (possibilities[i].alias != null) {
+            currentState = possibilities[i].alias;
+          } else {
+            currentState = possibilities[i].to;
+          }
           break;
         } else {
           finalTrick.push(
               possibilities[i].via[(nextTransitionIndex - currentCount) - 1]);
           finalTrick.push(possibilities[i].to);
-          currentState = possibilities[i].to;
+          if (possibilities[i].alias != null) {
+            currentState = possibilities[i].alias;
+          } else {
+            currentState = possibilities[i].to;
+          }
           break;
         }
       } else {
